@@ -23,7 +23,7 @@ pipeline {
             steps {
                 // Exécuter le script Python
                 sh '''
-                python3.11 script.py
+                python3.11 os_detector.py
                 '''
             }
         }
