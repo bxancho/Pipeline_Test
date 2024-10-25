@@ -1,7 +1,13 @@
 pipeline {
     agent any
-
+    
     stages {
+        stage('Clonage du dépôt GitHub') {
+            steps {
+                // Cloner le dépôt GitHub
+                git branch: 'main', url: 'https://github.com/bxancho/Pipeline_Test.git'
+            }
+        }
         stage('Build') {
             steps {
                 script {
